@@ -38,7 +38,7 @@ export  function SignIn() {
             <label >Password</label>
             <input type="password" name='password' onChange={formik.handleChange}
          value={formik.values.password} className="form-control"  />
-         <Link to='/forgetpassword' style={{"text-align":"left"}}>Forget Password</Link>
+         <Link to='/forgetpassword' style={{"text-align":"center"}}>Forget Password</Link>
         </div>
         
        <div className="offset-4">
