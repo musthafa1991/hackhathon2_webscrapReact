@@ -47,6 +47,14 @@
           <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
           <button className="btn btn-outline-success" type="submit">Search</button>
         </form>
+        <ul className="navbar-nav  mb-2 mb-lg-0">  
+          <li className="nav-item">
+            <Link className="nav-link" to="/signin">Sign in</Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/signup">Sign up</Link>
+          </li>
+        </ul>
       </div>
     </div>
   </nav>

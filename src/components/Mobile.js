@@ -7,8 +7,21 @@ import axios from 'axios';
 export function Mobile() {
     const [mobiles, setmobiles] = useState([]);
     useEffect(async () => {
-        const resdata = await axios.get("https://scrapshoping.herokuapp.com/mobiles");
+        // https://scrapshoping.herokuapp.com
+        // http://localhost:4000
+
+        try {
+            const resdata = await axios.get("https://scrapshoping.herokuapp.com/mobiles",{
+            headers:{
+                "authorization":localStorage.getItem("app_token")
+            }
+        });
         setmobiles(resdata.data);
+            
+        } catch (error) {
+            console.log(error)
+        }
+        
     }, []);
 
     return (
